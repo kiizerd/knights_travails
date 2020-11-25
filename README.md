@@ -60,7 +60,7 @@ This can be broken down into a few simple steps and probably more simply than I 
    
 --- 
 ### - Path
-  Tackles the meat of the problem
+  Tackles the meat of the problem  
   Initializes with a start and finish position and the piece object that it will be making a path for.
   - @piece -Object that is being pathed
   - @start -Starting node
@@ -92,7 +92,7 @@ This can be broken down into a few simple steps and probably more simply than I 
     2. Sets @finish to found node, and found to true
     3. Calls get_steps
 
-  - Path#get_steps
+  - Path#get_steps  
     Returns the path from start to finish as a string with arrows
 --- 
 
