@@ -14,11 +14,11 @@ This can be broken down into a few simple steps and probably more simply than I 
 2. Build a knight that will give an array of possible moves from a given position
 3. Build a Node class to represent a step in the path, with variables to hold its position in the board, in relation to the path, and possible moves from the node
 4. Build a Path class that takes a starting node and a destination node
-5. Starting at the root node
-  5-A. Check every move from current node and make it a child of current
-  5-B. Check every child for destination, add child to queue if not found
-  5-C. Set current to first in queue
-  5-D. Repeat A-C until queue is empty or destination is found
+5. Starting at the root node  
+  5-A. Check every move from current node and make it a child of current  
+  5-B. Check every child for destination, add child to queue if not found  
+  5-C. Set current to first in queue  
+  5-D. Repeat A-C until queue is empty or destination is found  
 6. Trace path from end to finish using node parents
 7. Return path
 
