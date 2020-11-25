@@ -25,6 +25,7 @@ This can be broken down into a few simple steps and probably more simply than I 
 ## **Classes**
 ### - Board
   Contains a grid class variable, an array of 64 other arrays, each containing coordinates in an 8x8 grid.
+  
   [1,1], [1,2], [1,3], [1,4], [1,5], [1,6], [1,7], [1,8],
   [2,1], [2,2], [2,3], [2,4], [2,5], [2,6], [2,7], [2,8],
   [3,1], [3,2], [3,3], [3,4], [3,5], [3,6], [3,7], [3,8],
@@ -33,9 +34,11 @@ This can be broken down into a few simple steps and probably more simply than I 
   [6,1], [6,2], [6,3], [6,4], [6,5], [6,6], [6,7], [6,8],
   [7,1], [7,2], [7,3], [7,4], [7,5], [7,6], [7,7], [7,8],
   [8,1], [8,2], [8,3], [8,4], [8,5], [8,6], [8,7], [8,8]
+  
 #### *Methods*
   - Board#allowed? (move)
     Takes a coordinate pair and returns false if it's outside the bounds of the board
+    
 ---    
 ### - Knight
   Has a readable position value and a get_moves method
@@ -43,10 +46,12 @@ This can be broken down into a few simple steps and probably more simply than I 
 #### *Methods*
   - Knight#get_moves (pos=@pos)
     Returns an array of all possible moves from given position, defaults to @pos
+    
 --- 
 ### - Node
-  Has a readable position and accessable parent and children instance variables
----
+   Has a readable position and accessable parent and children instance variables
+   
+--- 
 ### - Path
   Tackles the meat of the problem
   Initializes with a start and finish position and the piece object that it will be making a path for.
@@ -82,4 +87,5 @@ This can be broken down into a few simple steps and probably more simply than I 
 
   - Path#get_steps
     Returns the path from start to finish as a string with arrows
+--- 
 
