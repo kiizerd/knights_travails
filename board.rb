@@ -34,17 +34,16 @@ class Path
     @piece = piece
     @start = Node.new(start, nil, nil)
     @finish_pos = finish
-    make_path(@start, finish)
+    make_path(finish)
   end
 
-  def make_path(start, finish)
+  def make_path(finish)
     @queue = []
     @found = false
     @piece.pos = @start.pos
     
     current = @start
     @queue << current
-    @steps = 0
 
     until @queue.empty? or @found
       get_children(current)
@@ -96,7 +95,7 @@ class Path
       end
       steps += 1
     end
-    p "Path found in #{steps} steps"
+    p "Path found in #{steps - 1} steps"
     p @result.join
   end
 end
@@ -107,5 +106,6 @@ knight = Knight.new
 
 knight.knight_moves([3,1], [8,8])
 
+# >> "Path found in 5 steps"
 # >> "[3, 1]-> [4, 3]-> [5, 5]-> [6, 7]-> [8, 8]"
 
