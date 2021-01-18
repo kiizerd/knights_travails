@@ -89,7 +89,7 @@ class Path
     @path << @start.pos
     @path.reverse!.each do |pos|
       unless pos == @path.last 
-        @result << "#{pos}-> "
+        @result << "#{pos} -> "
       else
         @result << "#{pos}"
       end
@@ -104,8 +104,4 @@ board = Board.new
 
 knight = Knight.new
 
-knight.knight_moves([3,1], [8,8])
-
-# >> "Path found in 5 steps"
-# >> "[3, 1]-> [4, 3]-> [5, 5]-> [6, 7]-> [8, 8]"
-
+knight.knight_moves([1,1], [8,8])
